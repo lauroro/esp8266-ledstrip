@@ -45,7 +45,7 @@ Inside this folder there is all the necessary for the web-interface. Talking abo
 
 ## Demo
 This is a demo of the final result... sorry for the potato quality...
-![Video](https://youtu.be/jmez4LsH3O4)
+[Video from youtube](https://youtu.be/jmez4LsH3O4)
 
 And this is a close up on the web-interface UI.
 ![Screenshot_20220723-164555_Brave](https://user-images.githubusercontent.com/88981092/180610405-eac1e59e-93a1-4852-9e0d-4cf3cfe4ef92.jpg)
