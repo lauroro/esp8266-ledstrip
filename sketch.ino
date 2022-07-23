@@ -123,8 +123,8 @@ void setup() {
     // Build <li> string for all modes.
     String modes = "";
     modes.reserve(5000);
-    // Get only first 56 effects (pre-built effects) 
-    for(uint8_t i=0; i < 57; i++) {
+    // Get only first 56 effects ( [0-55] pre-built effects ) 
+    for(uint8_t i=0; i < 56; i++) {
       modes += "<button type='button' id='m";
       modes += i;
       modes += "'>";
