@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ESP8266 - WS2812B</title>
+  </head>
+
+  <body>
+    <div id="title-container">
+      <h1>Led strip controller</h1>
+    </div>
+    <div id="picker-container">
+      <div id="picker"></div>
+    </div>
+    <div id="s-buttons-container">
+      <button type="button" id="sd"><span>-</span></button>
+      <div id="speed-div">
+        <span>Delay</span>
+        <span id="speed-text"></span>
+      </div>  
+    <button type="button" id="su"><span>+</span></button>
+    </div>
+    <div id="modes-container">
+    </div>
+  </body>
+  <script src="iro.min.js"></script>
+  <script src="main.js"></script>
+</html>
