@@ -10,8 +10,8 @@
 
 
 //Wifi params
-const char* ssid = "TP-LINK_81CC";
-const char* password = "67652594";
+const char* ssid = "your-ssid-here";
+const char* password = "your-passwd-here";
 
 String _color = "c16777215";
 String _speed = "s200";
@@ -123,7 +123,8 @@ void setup() {
     // Build <li> string for all modes.
     String modes = "";
     modes.reserve(5000);
-    for(uint8_t i=0; i < 56; i++) {
+    // Get only first 56 effects (pre-built effects) 
+    for(uint8_t i=0; i < 57; i++) {
       modes += "<button type='button' id='m";
       modes += i;
       modes += "'>";
