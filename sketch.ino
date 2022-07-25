@@ -120,7 +120,6 @@ void setup() {
   server.serveStatic("/", LittleFS, "/");
 
   server.on("/modes", HTTP_GET, [](AsyncWebServerRequest *request){
-    // Build <li> string for all modes.
     String modes = "";
     modes.reserve(5000);
     // Get only first 56 effects ( [0-55] pre-built effects ) 
