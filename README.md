@@ -16,7 +16,6 @@ Something like this should be fine. Better to follow this scheme. Personally I d
 ## Libraries used
 1. If you use Arduino IDE be sure to [install esp8266 support](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/) first.
 2. External libraries (look into each library's readme file to see further dependancies):
-    - [LittleFS](https://github.com/earlephilhower/arduino-esp8266littlefs-plugin)
     - [WS2812FX](https://github.com/kitesurfer1404/WS2812FX)
     - [Arduino ESP8266 LittleFS Filesystem Uploader](https://github.com/earlephilhower/arduino-esp8266littlefs-plugin)
     - [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)
