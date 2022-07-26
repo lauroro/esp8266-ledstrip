@@ -1,5 +1,5 @@
 # esp8266-ledstrip
-A project to interact with a WS2812b led strip via web-interface, using WS2812FX library. You can change leds color, effect and effect's speed.
+A project to interact with a WS2812b led strip via web-interface, using WS2812FX library. You can change leds color, effect mode and effect's speed.
 
 ## Diagram
 Something like this should be fine. Better to follow this scheme. Personally I did something bad, basically I connected the led strip directly to the board. Before I understood it couldn't be sane I cooked two esp8266 boards... so, better to follow the scheme.
