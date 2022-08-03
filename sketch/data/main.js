@@ -1,10 +1,33 @@
-// ------------------ WebSocket ----------------------
+// ------------------ General --------------------
 
+/*
+* <ESP-IP-ADDRESS>[/?name=name-value]
+*
+* // Fields
+* name-value : everything
+*/
+
+// Defaults
+var deviceName = "Led strip controller";
+
+
+var queryString = decodeURIComponent(window.location.search); //parsing
+queryString = queryString.substring(1); 
+var queries = queryString.split("="); 
+if(queries[0] == "name" && queries[1] != "")
+  deviceName = queries[1];
+
+document.getElementById("header").textContent = deviceName;
+
+
+// ------------------ WebSocket ----------------------
 var gateway = "ws://"+window.location.hostname+"/ws";
 var websocket;
 
 window.addEventListener('load', function(event){
-  initWebSocket();
+  setTimeout(function(){
+    initWebSocket();
+  },1000);
 });
 
 function initWebSocket() {

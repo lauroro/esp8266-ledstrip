@@ -21,6 +21,10 @@ body{
 h1{
   color: #dedede;
 }
+#main-container{
+  display: flex;
+  flex-direction: column;
+}
 #picker-container{
   border: 2px solid #222222;
   border-radius: 8px;
@@ -86,5 +90,23 @@ h1{
   color: #dedede;
   font-size: 20px;
   font-weight: bold;
+}
+@media screen and (min-width:1024px){
+  #main-container{
+    flex-direction: row;
+  }
+  #modes-container{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+    max-width: 800px;
+    max-height: 600px;
+    margin-left: 8px;
+    align-items: center;
+    margin-top: 0px;
+  }
+  #modes-container::-webkit-scrollbar {
+    display: none;
+  }
 }
 

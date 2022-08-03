@@ -9,17 +9,19 @@
 #define LED_PIN       2     //D4 on NodeMCU Esp8266
 
 
-//Wifi params
+// Wifi params
 const char* ssid = "your-ssid-here";
 const char* password = "your-passwd-here";
 
+// State params
 String _color = "c16777215";
 String _speed = "s200";
 String _mode = "m0";
 
-
+// Led strip handler
 WS2812FX ws2812fx = WS2812FX(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
+// Async Web Server + websocket
 AsyncWebServer server(80);
 AsyncWebSocket ws("/ws");
 
@@ -83,14 +85,14 @@ void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType 
 
 
 
-
 void setup() {
   Serial.begin(115200);
 
   if (!LittleFS.begin()) {
     Serial.println("An error has occurred while mounting LittleFS");
   }
-  
+
+  // Init
   ws2812fx.init();
   ws2812fx.setMode(FX_MODE_STATIC);
   ws2812fx.setColor(0xFFFFFF);
@@ -112,13 +114,13 @@ void setup() {
   ws.onEvent(onEvent);
   server.addHandler(&ws);
 
-
   // Web Server Root URL
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(LittleFS, "/index.html", "text/html");
   });
   server.serveStatic("/", LittleFS, "/");
 
+  // HTTP request for modes list
   server.on("/modes", HTTP_GET, [](AsyncWebServerRequest *request){
     String modes = "";
     modes.reserve(5000);
